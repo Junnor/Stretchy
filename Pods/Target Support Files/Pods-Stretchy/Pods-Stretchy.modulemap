@@ -1,0 +1,6 @@
+framework module Pods_Stretchy {
+  umbrella header "Pods-Stretchy-umbrella.h"
+
+  export *
+  module * { export * }
+}
