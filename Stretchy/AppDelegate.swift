@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let cleanImage = UIImage.from(color: UIColor.clear)
         bar.setBackgroundImage(cleanImage, for: UIBarMetrics.default)
         bar.shadowImage = UIImage()
-        
+//
         return true
         
     }
