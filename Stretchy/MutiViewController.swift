@@ -8,7 +8,7 @@
 
 import UIKit
 
-let num44: CGFloat = 44
+let num44: CGFloat = 100
 let width = UIScreen.main.bounds.width
 let height = UIScreen.main.bounds.height
 let subHeight = height-num44
@@ -32,14 +32,14 @@ class MutiViewController: UIViewController {
         }
     }
     
-    lazy var subScrollView: UIScrollView = {
-        let subScrollView = UIScrollView(frame: CGRect(x: 0, y: 0, width: width, height: subHeight))
-        subScrollView.bounces = true
-        subScrollView.contentSize = CGSize(width: width*2, height: subHeight)
-        subScrollView.isPagingEnabled = true
-        subScrollView.showsHorizontalScrollIndicator = false
-        subScrollView.delegate = self
-        return subScrollView
+    lazy var mainContainerScrollView: UIScrollView = {
+        let sv = UIScrollView(frame: CGRect(x: 0, y: 0, width: width, height: subHeight))
+        sv.bounces = true
+        sv.contentSize = CGSize(width: width*2, height: subHeight)
+        sv.isPagingEnabled = true
+        sv.showsHorizontalScrollIndicator = false
+        sv.delegate = self
+        return sv
     }()
     
     lazy var levelListView: YBLevelListView = {
@@ -53,18 +53,20 @@ class MutiViewController: UIViewController {
         return listView
     }()
     
-    lazy var picAndTextTableView: Sub1TableView = {
-        let picAndTextTableView = Sub1TableView(frame: CGRect(x: 0, y: 0, width: width, height: subHeight), style: .plain)
-        picAndTextTableView.backgroundColor = UIColor.white
-        picAndTextTableView.mainVC = self
-        return  picAndTextTableView
+    lazy var firstItemTableView: Sub1TableView = {
+        let firstItemV = Sub1TableView(frame: CGRect(x: 0, y: 0, width: width, height: subHeight), style: .plain)
+        firstItemV.backgroundColor = UIColor.white
+        firstItemV.isFirstItem = true
+        firstItemV.mainVC = self
+        return  firstItemV
     }()
     
-    lazy var evaluateTableView: Sub1TableView = {
-        let evaluateTableView = Sub1TableView(frame: CGRect(x: width, y: 0, width: width, height: subHeight), style: .plain)
-        evaluateTableView.backgroundColor = UIColor.white
-        evaluateTableView.mainVC = self
-        return evaluateTableView
+    lazy var secondItemTableView: Sub1TableView = {
+        let secondItemV = Sub1TableView(frame: CGRect(x: width, y: 0, width: width, height: subHeight), style: .plain)
+        secondItemV.backgroundColor = UIColor.white
+        secondItemV.isFirstItem = false
+        secondItemV.mainVC = self
+        return secondItemV
     }()
 
     var offsetType: OffsetType = .min
@@ -75,17 +77,11 @@ class MutiViewController: UIViewController {
         let header = Bundle.main.loadNibNamed("TabsHeaderView", owner: nil, options: nil)?.first as! TabsHeaderView
         tableView.addSubview(header)
         
-//        let header = UIView()
-//        header.backgroundColor = UIColor.cyan
-//        header.frame = CGRect(x: 0, y: 0, width: width, height: 100)
-//        tableView.tableHeaderView = header
-        
         if #available(iOS 11.0, *) {
             tableView.contentInsetAdjustmentBehavior = .never
         } else {
             automaticallyAdjustsScrollViewInsets = false
         }
-
     }
 
 }
@@ -106,30 +102,21 @@ extension MutiViewController: UITableViewDataSource, UITableViewDelegate {
             cell = UITableViewCell(style: .default, reuseIdentifier: "nullCell1")
             
             
-            cell?.addSubview(subScrollView)
+            cell?.addSubview(mainContainerScrollView)
             
-            subScrollView.addSubview(picAndTextTableView)
+            mainContainerScrollView.addSubview(firstItemTableView)
             
-            subScrollView.addSubview(evaluateTableView)
+            mainContainerScrollView.addSubview(secondItemTableView)
             
             cell?.selectionStyle = .none
         }
         return cell!
     }
     
-    
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        return levelListView
-//    }
-//
-//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        return num44
-//    }
-    
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        if scrollView == subScrollView {
-            self.evaluateTableView.isScrollEnabled = false
-            self.picAndTextTableView.isScrollEnabled = false
+        if scrollView == mainContainerScrollView {
+            self.secondItemTableView.isScrollEnabled = false
+            self.firstItemTableView.isScrollEnabled = false
         }
     }
     
@@ -138,9 +125,9 @@ extension MutiViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        if scrollView == subScrollView {
-            self.evaluateTableView.isScrollEnabled = true
-            self.picAndTextTableView.isScrollEnabled = true
+        if scrollView == mainContainerScrollView {
+            self.secondItemTableView.isScrollEnabled = true
+            self.firstItemTableView.isScrollEnabled = true
         }
     }
     
@@ -154,16 +141,16 @@ extension MutiViewController: UITableViewDataSource, UITableViewDelegate {
                 self.offsetType = .center;
             }
             
-            if (self.levelListView.selectedIndex == 0 && picAndTextTableView.offsetType == .center) {
+            if (self.levelListView.selectedIndex == 0 && firstItemTableView.offsetType == .center) {
                 scrollView.contentOffset = CGPoint(x: scrollView.contentOffset.x, y: scrollView.contentSize.height-scrollView.frame.size.height)
             }
             
-            if (self.levelListView.selectedIndex == 1 && evaluateTableView.offsetType == .center) {
+            if (self.levelListView.selectedIndex == 1 && secondItemTableView.offsetType == .center) {
                 
                 scrollView.contentOffset = CGPoint(x: scrollView.contentOffset.x, y: scrollView.contentSize.height-scrollView.frame.size.height)
             }
-        } else if scrollView == subScrollView {
-            levelListView.configAnimationOffsetX(subScrollView.contentOffset.x)
+        } else if scrollView == mainContainerScrollView {
+            levelListView.configAnimationOffsetX(mainContainerScrollView.contentOffset.x)
         }
     }
     
@@ -171,6 +158,6 @@ extension MutiViewController: UITableViewDataSource, UITableViewDelegate {
 
 extension MutiViewController: YBLevelListViewDelegate {
     func yBLevelListView(_ yBLevelListView: YBLevelListView!, choose index: Int) {
-        subScrollView.setContentOffset(CGPoint(x: width*CGFloat(index), y: 0), animated: false)
+        mainContainerScrollView.setContentOffset(CGPoint(x: width*CGFloat(index), y: 0), animated: false)
     }
 }

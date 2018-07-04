@@ -19,6 +19,8 @@ class Sub1TableView: UITableView, UIGestureRecognizerDelegate {
         rowHeight = 100
     }
     
+    var isFirstItem = true
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -43,7 +45,7 @@ extension Sub1TableView: UITableViewDataSource {
         if cell == nil {
             cell = UITableViewCell(style: .default, reuseIdentifier: "simpleCell")
         }
-        cell?.textLabel?.text = "评论模块\(indexPath.item)"
+        cell?.textLabel?.text = isFirstItem ? "Hello \(indexPath.item)" : "World \(indexPath.item)"
         
         return cell!
     }

@@ -30,11 +30,10 @@
                             <segments>
                                 <segment title="First"/>
                                 <segment title="Second"/>
-                                <segment title="Third"/>
                             </segments>
                         </segmentedControl>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" red="0.58823529409999997" green="0.87450980389999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="gXb-PN-r3Y" secondAttribute="trailing" id="CUe-5E-T4W"/>
                         <constraint firstItem="1nj-tL-XET" firstAttribute="centerX" secondItem="QsQ-ir-V2U" secondAttribute="centerX" id="Jgn-yb-fbM"/>
