@@ -19,7 +19,6 @@
 		8BD14B0720EBC26C00F3C45F /* YBLevelListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD14AFD20EBC26C00F3C45F /* YBLevelListView.m */; };
 		8BD14B0820EBC26C00F3C45F /* YBLevelListConfigModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD14B0020EBC26C00F3C45F /* YBLevelListConfigModel.m */; };
 		8BD14B0920EBC26C00F3C45F /* YBLevelListSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD14B0220EBC26C00F3C45F /* YBLevelListSubView.m */; };
-		8BD14B0B20EBC26C00F3C45F /* YBLevelListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD14B0620EBC26C00F3C45F /* YBLevelListController.m */; };
 		8BD14B1020EBC63600F3C45F /* Sub1TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD14B0F20EBC63600F3C45F /* Sub1TableView.swift */; };
 		E1F1CFF8B0ABE29BD8B05CCD /* Pods_Stretchy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED8188D0CFEC98641C566499 /* Pods_Stretchy.framework */; };
 /* End PBXBuildFile section */
@@ -41,11 +40,9 @@
 		8BD14AFD20EBC26C00F3C45F /* YBLevelListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBLevelListView.m; sourceTree = "<group>"; };
 		8BD14AFF20EBC26C00F3C45F /* YBLevelListSubView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBLevelListSubView.h; sourceTree = "<group>"; };
 		8BD14B0020EBC26C00F3C45F /* YBLevelListConfigModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBLevelListConfigModel.m; sourceTree = "<group>"; };
-		8BD14B0120EBC26C00F3C45F /* YBLevelListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBLevelListController.h; sourceTree = "<group>"; };
 		8BD14B0220EBC26C00F3C45F /* YBLevelListSubView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBLevelListSubView.m; sourceTree = "<group>"; };
 		8BD14B0420EBC26C00F3C45F /* YBLevelListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBLevelListView.h; sourceTree = "<group>"; };
 		8BD14B0520EBC26C00F3C45F /* YBLevelListConfigModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBLevelListConfigModel.h; sourceTree = "<group>"; };
-		8BD14B0620EBC26C00F3C45F /* YBLevelListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBLevelListController.m; sourceTree = "<group>"; };
 		8BD14B0F20EBC63600F3C45F /* Sub1TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sub1TableView.swift; sourceTree = "<group>"; };
 		DBF830528136B28A824EC3D4 /* Pods-Stretchy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stretchy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Stretchy/Pods-Stretchy.release.xcconfig"; sourceTree = "<group>"; };
 		ED8188D0CFEC98641C566499 /* Pods_Stretchy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stretchy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,8 +116,6 @@
 				8BD14B0020EBC26C00F3C45F /* YBLevelListConfigModel.m */,
 				8BD14AFF20EBC26C00F3C45F /* YBLevelListSubView.h */,
 				8BD14B0220EBC26C00F3C45F /* YBLevelListSubView.m */,
-				8BD14B0120EBC26C00F3C45F /* YBLevelListController.h */,
-				8BD14B0620EBC26C00F3C45F /* YBLevelListController.m */,
 			);
 			path = YB;
 			sourceTree = "<group>";
@@ -249,7 +244,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B1A9BB820EA515E0014B66D /* ViewController.swift in Sources */,
-				8BD14B0B20EBC26C00F3C45F /* YBLevelListController.m in Sources */,
 				8B1A9BCC20EA5B4F0014B66D /* CVViewController.swift in Sources */,
 				8BD14AFB20EBC1D100F3C45F /* MutiViewController.swift in Sources */,
 				8BD14B1020EBC63600F3C45F /* Sub1TableView.swift in Sources */,
