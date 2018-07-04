@@ -60,7 +60,7 @@ class MutiViewController: UIViewController {
 
 }
 
-extension MutiViewController: UITableViewDataSource {
+extension MutiViewController: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
@@ -71,10 +71,6 @@ extension MutiViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return indexPath.section == 0 ? 400 : subHeight
-    }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return section == 1 ? num44 : 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -108,15 +104,18 @@ extension MutiViewController: UITableViewDataSource {
         }
     }
     
-}
 
-extension MutiViewController: UITableViewDelegate {
-    
+
+
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if section == 1 {
             return levelListView
         }
         return nil
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return section == 1 ? num44 : 0
     }
     
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {

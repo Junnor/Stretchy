@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Sub1TableView: UITableView {
+class Sub1TableView: UITableView, UIGestureRecognizerDelegate {
 
     override init(frame: CGRect, style: UITableViewStyle) {
         super.init(frame: frame, style: style)
@@ -26,17 +26,10 @@ class Sub1TableView: UITableView {
     weak var mainVC: MutiViewController?
     var offsetType: OffsetType = .min
 
-//    override func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
-//        return true
-//    }
-    
-    func gestureRecognizer(_: UIGestureRecognizer,
-                           shouldRecognizeSimultaneouslyWithGestureRecognizer:UIGestureRecognizer)
-        -> Bool {
-            return true
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
     }
 
-    
 }
 
 extension Sub1TableView: UITableViewDataSource {
