@@ -19,9 +19,7 @@
 		8BD14B0720EBC26C00F3C45F /* YBLevelListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD14AFD20EBC26C00F3C45F /* YBLevelListView.m */; };
 		8BD14B0820EBC26C00F3C45F /* YBLevelListConfigModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD14B0020EBC26C00F3C45F /* YBLevelListConfigModel.m */; };
 		8BD14B0920EBC26C00F3C45F /* YBLevelListSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD14B0220EBC26C00F3C45F /* YBLevelListSubView.m */; };
-		8BD14B0A20EBC26C00F3C45F /* UIView+YB.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD14B0320EBC26C00F3C45F /* UIView+YB.m */; };
 		8BD14B0B20EBC26C00F3C45F /* YBLevelListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD14B0620EBC26C00F3C45F /* YBLevelListController.m */; };
-		8BD14B0E20EBC62B00F3C45F /* Sub0TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD14B0D20EBC62B00F3C45F /* Sub0TableView.swift */; };
 		8BD14B1020EBC63600F3C45F /* Sub1TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD14B0F20EBC63600F3C45F /* Sub1TableView.swift */; };
 		E1F1CFF8B0ABE29BD8B05CCD /* Pods_Stretchy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED8188D0CFEC98641C566499 /* Pods_Stretchy.framework */; };
 /* End PBXBuildFile section */
@@ -41,17 +39,13 @@
 		8BD14AF920EBC00300F3C45F /* Stretchy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Stretchy-Bridging-Header.h"; sourceTree = "<group>"; };
 		8BD14AFA20EBC1D100F3C45F /* MutiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutiViewController.swift; sourceTree = "<group>"; };
 		8BD14AFD20EBC26C00F3C45F /* YBLevelListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBLevelListView.m; sourceTree = "<group>"; };
-		8BD14AFE20EBC26C00F3C45F /* UIView+YB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YB.h"; sourceTree = "<group>"; };
 		8BD14AFF20EBC26C00F3C45F /* YBLevelListSubView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBLevelListSubView.h; sourceTree = "<group>"; };
 		8BD14B0020EBC26C00F3C45F /* YBLevelListConfigModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBLevelListConfigModel.m; sourceTree = "<group>"; };
 		8BD14B0120EBC26C00F3C45F /* YBLevelListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBLevelListController.h; sourceTree = "<group>"; };
 		8BD14B0220EBC26C00F3C45F /* YBLevelListSubView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBLevelListSubView.m; sourceTree = "<group>"; };
-		8BD14B0320EBC26C00F3C45F /* UIView+YB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YB.m"; sourceTree = "<group>"; };
 		8BD14B0420EBC26C00F3C45F /* YBLevelListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBLevelListView.h; sourceTree = "<group>"; };
 		8BD14B0520EBC26C00F3C45F /* YBLevelListConfigModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBLevelListConfigModel.h; sourceTree = "<group>"; };
 		8BD14B0620EBC26C00F3C45F /* YBLevelListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBLevelListController.m; sourceTree = "<group>"; };
-		8BD14B0C20EBC36400F3C45F /* MultstageScrollViewHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultstageScrollViewHeader.h; sourceTree = "<group>"; };
-		8BD14B0D20EBC62B00F3C45F /* Sub0TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sub0TableView.swift; sourceTree = "<group>"; };
 		8BD14B0F20EBC63600F3C45F /* Sub1TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sub1TableView.swift; sourceTree = "<group>"; };
 		DBF830528136B28A824EC3D4 /* Pods-Stretchy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stretchy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Stretchy/Pods-Stretchy.release.xcconfig"; sourceTree = "<group>"; };
 		ED8188D0CFEC98641C566499 /* Pods_Stretchy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stretchy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,7 +97,6 @@
 				8B1A9BB720EA515E0014B66D /* ViewController.swift */,
 				8B1A9BCB20EA5B4F0014B66D /* CVViewController.swift */,
 				8BD14AFA20EBC1D100F3C45F /* MutiViewController.swift */,
-				8BD14B0D20EBC62B00F3C45F /* Sub0TableView.swift */,
 				8BD14B0F20EBC63600F3C45F /* Sub1TableView.swift */,
 				8B1A9BC720EA550C0014B66D /* TabsHeaderView.swift */,
 				8B1A9BC920EA55180014B66D /* TabsHeaderView.xib */,
@@ -120,9 +113,6 @@
 		8BD14AFC20EBC26C00F3C45F /* YB */ = {
 			isa = PBXGroup;
 			children = (
-				8BD14B0C20EBC36400F3C45F /* MultstageScrollViewHeader.h */,
-				8BD14AFE20EBC26C00F3C45F /* UIView+YB.h */,
-				8BD14B0320EBC26C00F3C45F /* UIView+YB.m */,
 				8BD14B0420EBC26C00F3C45F /* YBLevelListView.h */,
 				8BD14AFD20EBC26C00F3C45F /* YBLevelListView.m */,
 				8BD14B0520EBC26C00F3C45F /* YBLevelListConfigModel.h */,
@@ -263,9 +253,7 @@
 				8B1A9BCC20EA5B4F0014B66D /* CVViewController.swift in Sources */,
 				8BD14AFB20EBC1D100F3C45F /* MutiViewController.swift in Sources */,
 				8BD14B1020EBC63600F3C45F /* Sub1TableView.swift in Sources */,
-				8BD14B0E20EBC62B00F3C45F /* Sub0TableView.swift in Sources */,
 				8BD14B0920EBC26C00F3C45F /* YBLevelListSubView.m in Sources */,
-				8BD14B0A20EBC26C00F3C45F /* UIView+YB.m in Sources */,
 				8BD14B0820EBC26C00F3C45F /* YBLevelListConfigModel.m in Sources */,
 				8B1A9BC820EA550C0014B66D /* TabsHeaderView.swift in Sources */,
 				8BD14B0720EBC26C00F3C45F /* YBLevelListView.m in Sources */,

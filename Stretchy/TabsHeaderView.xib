@@ -17,59 +17,39 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QsQ-ir-V2U">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="234"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label XX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s6X-b0-z4I">
-                            <rect key="frame" x="36" y="2" width="302" height="95.5"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nj-tL-XET">
+                            <rect key="frame" x="95" y="69.5" width="184" height="95.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="80"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gXb-PN-r3Y">
+                            <rect key="frame" x="0.0" y="206" width="375" height="29"/>
+                            <segments>
+                                <segment title="First"/>
+                                <segment title="Second"/>
+                                <segment title="Third"/>
+                            </segments>
+                        </segmentedControl>
                     </subviews>
-                    <color key="backgroundColor" red="1" green="0.83921568629999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="s6X-b0-z4I" firstAttribute="centerY" secondItem="QsQ-ir-V2U" secondAttribute="centerY" id="9Xn-9d-zcU"/>
-                        <constraint firstAttribute="height" constant="100" id="Bvu-Zp-4Hy"/>
-                        <constraint firstItem="s6X-b0-z4I" firstAttribute="centerX" secondItem="QsQ-ir-V2U" secondAttribute="centerX" id="wWF-fH-aeJ"/>
+                        <constraint firstAttribute="trailing" secondItem="gXb-PN-r3Y" secondAttribute="trailing" id="CUe-5E-T4W"/>
+                        <constraint firstItem="1nj-tL-XET" firstAttribute="centerX" secondItem="QsQ-ir-V2U" secondAttribute="centerX" id="Jgn-yb-fbM"/>
+                        <constraint firstItem="1nj-tL-XET" firstAttribute="centerY" secondItem="QsQ-ir-V2U" secondAttribute="centerY" id="TSe-3U-9Zo"/>
+                        <constraint firstItem="gXb-PN-r3Y" firstAttribute="leading" secondItem="QsQ-ir-V2U" secondAttribute="leading" id="dHz-27-htc"/>
+                        <constraint firstAttribute="bottom" secondItem="gXb-PN-r3Y" secondAttribute="bottom" id="dxU-PR-1dJ"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u4d-nh-wWJ">
-                    <rect key="frame" x="0.0" y="100" width="375" height="100"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label OO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nj-tL-XET">
-                            <rect key="frame" x="28.5" y="3" width="317.5" height="95.5"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="80"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
-                    <color key="backgroundColor" red="1" green="0.58832500980000002" blue="0.72113791780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstItem="1nj-tL-XET" firstAttribute="centerY" secondItem="u4d-nh-wWJ" secondAttribute="centerY" id="b9s-11-AzA"/>
-                        <constraint firstAttribute="height" constant="100" id="ehZ-Pq-BWi"/>
-                        <constraint firstItem="1nj-tL-XET" firstAttribute="centerX" secondItem="u4d-nh-wWJ" secondAttribute="centerX" id="gGy-hG-Fo6"/>
-                    </constraints>
-                </view>
-                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gXb-PN-r3Y">
-                    <rect key="frame" x="0.0" y="206" width="375" height="29"/>
-                    <segments>
-                        <segment title="First"/>
-                        <segment title="Second"/>
-                        <segment title="Third"/>
-                    </segments>
-                </segmentedControl>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="QsQ-ir-V2U" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="08F-2E-ooq"/>
-                <constraint firstItem="gXb-PN-r3Y" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="GJ2-Jo-zZG"/>
                 <constraint firstItem="QsQ-ir-V2U" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="NzC-dq-Uzf"/>
                 <constraint firstItem="QsQ-ir-V2U" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="dAc-ME-zuF"/>
-                <constraint firstItem="u4d-nh-wWJ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="e9f-1u-XNT"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="gXb-PN-r3Y" secondAttribute="trailing" id="h0j-aG-ohm"/>
-                <constraint firstItem="u4d-nh-wWJ" firstAttribute="top" secondItem="QsQ-ir-V2U" secondAttribute="bottom" id="seu-0L-LuU"/>
-                <constraint firstAttribute="bottom" secondItem="gXb-PN-r3Y" secondAttribute="bottom" id="uvt-Jl-WJg"/>
-                <constraint firstAttribute="trailing" secondItem="u4d-nh-wWJ" secondAttribute="trailing" id="yKd-SC-e5h"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="QsQ-ir-V2U" secondAttribute="bottom" id="tEM-Ry-yd3"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
