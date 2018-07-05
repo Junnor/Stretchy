@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Sub1TableView: UITableView, UIGestureRecognizerDelegate {
+class Sub1TableView: UITableView, UIGestureRecognizerDelegate, ScrollOffSetProtocol {
 
     override init(frame: CGRect, style: UITableViewStyle) {
         super.init(frame: frame, style: style)
@@ -26,6 +26,7 @@ class Sub1TableView: UITableView, UIGestureRecognizerDelegate {
     }
     
     weak var mainVC: MutiViewController?
+    
     var offsetType: OffsetType = .min  {
         didSet {
             if isFirstItem {
@@ -34,7 +35,6 @@ class Sub1TableView: UITableView, UIGestureRecognizerDelegate {
                     mainVC?.secondItemTableView.setContentOffset(.zero, animated: false)
                 }
 //                print("isFirstItem offsetType = \(offsetType)")
-
             } else {
                 if offsetType == .min {
                     mainVC?.firstItemTableView.offsetType = .min

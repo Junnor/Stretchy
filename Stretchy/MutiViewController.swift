@@ -14,6 +14,12 @@ let height = UIScreen.main.bounds.height
 let subHeight = height-num44
 
 
+
+protocol ScrollOffSetProtocol {
+    var offsetType: OffsetType { get set }
+}
+
+
 enum OffsetType {
     case min
     case center
@@ -21,8 +27,13 @@ enum OffsetType {
 }
 
 
-class MutiViewController: UIViewController {
+class MutiViewController: UIViewController, ScrollOffSetProtocol {
     
+    var offsetType: OffsetType = .min {
+        didSet {
+            //            print("muti offsetType = \(offsetType)")
+        }
+    }
 
     @IBOutlet weak var tableView: UITableView! {
         didSet {
@@ -69,11 +80,6 @@ class MutiViewController: UIViewController {
         return secondItemV
     }()
 
-    var offsetType: OffsetType = .min {
-        didSet {
-//            print("muti offsetType = \(offsetType)")
-        }
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
