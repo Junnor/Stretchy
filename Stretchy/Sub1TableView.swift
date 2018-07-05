@@ -26,7 +26,24 @@ class Sub1TableView: UITableView, UIGestureRecognizerDelegate {
     }
     
     weak var mainVC: MutiViewController?
-    var offsetType: OffsetType = .min
+    var offsetType: OffsetType = .min  {
+        didSet {
+            if isFirstItem {
+                if offsetType == .min {
+                    mainVC?.secondItemTableView.offsetType = .min
+                    mainVC?.secondItemTableView.setContentOffset(.zero, animated: false)
+                }
+//                print("isFirstItem offsetType = \(offsetType)")
+
+            } else {
+                if offsetType == .min {
+                    mainVC?.firstItemTableView.offsetType = .min
+                    mainVC?.firstItemTableView.setContentOffset(.zero, animated: false)
+                }
+//                print("not isFirstItem offsetType = \(offsetType)")
+            }
+        }
+    }
 
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true

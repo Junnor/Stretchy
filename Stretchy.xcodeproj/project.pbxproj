@@ -14,7 +14,6 @@
 		8B1A9BC020EA51610014B66D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B1A9BBE20EA51610014B66D /* LaunchScreen.storyboard */; };
 		8B1A9BC820EA550C0014B66D /* TabsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1A9BC720EA550C0014B66D /* TabsHeaderView.swift */; };
 		8B1A9BCA20EA55180014B66D /* TabsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B1A9BC920EA55180014B66D /* TabsHeaderView.xib */; };
-		8B1A9BCC20EA5B4F0014B66D /* CVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1A9BCB20EA5B4F0014B66D /* CVViewController.swift */; };
 		8BD14AFB20EBC1D100F3C45F /* MutiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD14AFA20EBC1D100F3C45F /* MutiViewController.swift */; };
 		8BD14B0720EBC26C00F3C45F /* YBLevelListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD14AFD20EBC26C00F3C45F /* YBLevelListView.m */; };
 		8BD14B0820EBC26C00F3C45F /* YBLevelListConfigModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD14B0020EBC26C00F3C45F /* YBLevelListConfigModel.m */; };
@@ -34,7 +33,6 @@
 		8B1A9BC120EA51610014B66D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B1A9BC720EA550C0014B66D /* TabsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsHeaderView.swift; sourceTree = "<group>"; };
 		8B1A9BC920EA55180014B66D /* TabsHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabsHeaderView.xib; sourceTree = "<group>"; };
-		8B1A9BCB20EA5B4F0014B66D /* CVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVViewController.swift; sourceTree = "<group>"; };
 		8BD14AF920EBC00300F3C45F /* Stretchy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Stretchy-Bridging-Header.h"; sourceTree = "<group>"; };
 		8BD14AFA20EBC1D100F3C45F /* MutiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutiViewController.swift; sourceTree = "<group>"; };
 		8BD14AFD20EBC26C00F3C45F /* YBLevelListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBLevelListView.m; sourceTree = "<group>"; };
@@ -92,7 +90,6 @@
 			children = (
 				8B1A9BB520EA515E0014B66D /* AppDelegate.swift */,
 				8B1A9BB720EA515E0014B66D /* ViewController.swift */,
-				8B1A9BCB20EA5B4F0014B66D /* CVViewController.swift */,
 				8BD14AFA20EBC1D100F3C45F /* MutiViewController.swift */,
 				8BD14B0F20EBC63600F3C45F /* Sub1TableView.swift */,
 				8B1A9BC720EA550C0014B66D /* TabsHeaderView.swift */,
@@ -244,7 +241,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B1A9BB820EA515E0014B66D /* ViewController.swift in Sources */,
-				8B1A9BCC20EA5B4F0014B66D /* CVViewController.swift in Sources */,
 				8BD14AFB20EBC1D100F3C45F /* MutiViewController.swift in Sources */,
 				8BD14B1020EBC63600F3C45F /* Sub1TableView.swift in Sources */,
 				8BD14B0920EBC26C00F3C45F /* YBLevelListSubView.m in Sources */,
@@ -399,7 +395,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V5NZ3R8346;
+				DEVELOPMENT_TEAM = N5NQESTGE5;
 				INFOPLIST_FILE = Stretchy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -419,7 +415,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V5NZ3R8346;
+				DEVELOPMENT_TEAM = N5NQESTGE5;
 				INFOPLIST_FILE = Stretchy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -69,7 +69,11 @@ class MutiViewController: UIViewController {
         return secondItemV
     }()
 
-    var offsetType: OffsetType = .min
+    var offsetType: OffsetType = .min {
+        didSet {
+//            print("muti offsetType = \(offsetType)")
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -141,7 +145,7 @@ extension MutiViewController: UITableViewDataSource, UITableViewDelegate {
                 self.offsetType = .center;
             }
             
-            print("self.levelListView.selectedIndex = \(self.levelListView.selectedIndex)")
+//            print("self.levelListView.selectedIndex = \(self.levelListView.selectedIndex)")
             
             if (self.levelListView.selectedIndex == 0 && firstItemTableView.offsetType == .center) {
                 scrollView.contentOffset = CGPoint(x: scrollView.contentOffset.x, y: scrollView.contentSize.height-scrollView.frame.size.height)
